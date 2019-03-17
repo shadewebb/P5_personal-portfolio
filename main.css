@@ -12,7 +12,7 @@
   --main-color: hsl(228, 19%, 5%);
   --complement-color: hsl(213, 24%, 19%);
   --neutral-color: hsl(210, 2%, 78%);
-  --contrast-color: hsl(176, 96%, 69%);
+  --contrast-color: hsl(176, 90%, 50%);
   --slight-contrast-color: hsl(177, 40%, 45%);
   --header-font: 'Playfair Display', serif;
   --link-font: 'Ubuntu', sans-serif, 'Arial';
@@ -55,6 +55,15 @@
   grid-area: main;
 }
 
+.project-tile {
+  padding: 15px;
+  box-shadow: 0 10px 15px -10px hsla(0, 0%, 0%, 0.699);
+  background: linear-gradient(310deg, var(--main-color) 5%, var(--complement-color) 80%, var(--slight-contrast-color) 50%);
+  color: var(--neutral-color);
+  display: flex;
+  flex-direction: column;
+}
+
 .footer {
   grid-area: footer;
 }
@@ -85,12 +94,34 @@
   text-align: center;
 }
 
+.project-tile__img {
+  max-width: 100%;
+}
+
+.project-tile__caption {
+  color: var(--contrast-color);
+  font-family: var(--link-font);
+  font-size: calc(1rem + 0.1vw);
+  margin-top: calc(15px + .3vw);
+  margin-bottom: calc(5px + .3vw);
+  width: auto;
+  align-self: center;
+  text-align: center;
+}
+
+.project-tile__link {
+  text-decoration: none;
+  display: block;
+  width: calc(15rem + 10vw);
+  margin: 40px auto;
+}
+
 /* BEM Modifiers */
 
 
 /* Media Queries */
 
-@media (min-width: 500px) {
+@media (min-width: 440px) {
   .header__card {
     width: auto;
     padding: 10px 45px;
