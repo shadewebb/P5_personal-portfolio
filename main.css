@@ -9,11 +9,11 @@
 /* CSS Variables */
 
 :root {
-  --main-color: #0B0C10;
+  --main-color: hsl(228, 19%, 5%);
   --complement-color: hsl(213, 24%, 19%);
-  --neutral-color: #C5C6C7;
-  --contrast-color: #66FCF1;
-  --slight-contrast-color: #45A29E;
+  --neutral-color: hsl(210, 2%, 78%);
+  --contrast-color: hsl(176, 96%, 69%);
+  --slight-contrast-color: hsl(177, 40%, 45%);
   --header-font: 'Playfair Display', serif;
   --link-font: 'Ubuntu', sans-serif, 'Arial';
 }
@@ -63,19 +63,25 @@
 
 .nav__link {
   text-decoration: none;
-  font-size: calc(0.9rem + 0.3vw);
+  font-size: calc(0.9rem + 0.25vw);
   color: var(--neutral-color);
   margin-right: 20px;
   font-family: var(--link-font);
-  padding: 10px;
+  padding: 20px 0;
+}
+
+.header__card {
+  margin: 0 auto;
+  width: 100%;
+  background: hsl(0, 0%, 95%);
+  padding: 10px 5px;
+  box-shadow: 0 15px 20px -10px hsla(0, 0%, 0%, 0.699);
 }
 
 .header__page-title {
-  font-size: calc(3rem + 3vw);
+  font-size: calc(3rem + 2vw);
   font-family: var(--header-font);
   font-weight: 700;
-  margin: 0 auto;
-  padding: 20px;
   text-align: center;
 }
 
@@ -84,4 +90,9 @@
 
 /* Media Queries */
 
-@media (min-width: 400px) {}
+@media (min-width: 500px) {
+  .header__card {
+    width: auto;
+    padding: 10px 45px;
+  }
+}
