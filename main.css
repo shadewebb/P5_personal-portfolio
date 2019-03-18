@@ -55,6 +55,10 @@
   grid-area: main;
 }
 
+.projects {
+  padding: 10vh 0;
+}
+
 .project-tile {
   color: var(--neutral-color);
   padding: 15px;
