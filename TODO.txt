@@ -1,0 +1,2 @@
+1. Add links to other GitHub pages projects
+2. Add 'contact me' link to webform after learning Java
