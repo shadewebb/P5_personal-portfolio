@@ -139,9 +139,13 @@
   text-align: center;
   margin: 0 3vw;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: grid;
+  grid-template-rows: auto 100px min-content auto;
+  grid-template-areas:
+    "."
+    "icon"
+    "site"
+    ".";
 }
 
 .footer__link:hover {
@@ -149,9 +153,15 @@
 }
 
 .footer__img {
+  grid-area: icon;
   max-width: 100px;
   width: calc(3rem + 6vw);
   margin: 0 auto 5px auto;
+  align-self: center;
+}
+
+.footer__img-caption {
+  grid-area: site;
 }
 
 /* BEM Modifiers */
