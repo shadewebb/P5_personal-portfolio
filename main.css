@@ -56,16 +56,24 @@
 }
 
 .project-tile {
+  color: var(--contrast-color);
   padding: 15px;
   box-shadow: 0 10px 15px -10px hsla(0, 0%, 0%, 0.699);
   background: linear-gradient(310deg, var(--main-color) 5%, var(--complement-color) 80%, var(--slight-contrast-color) 50%);
-  color: var(--neutral-color);
   display: flex;
   flex-direction: column;
 }
 
+.project-tile:hover {
+  color: var(--neutral-color);
+}
+
 .footer {
   grid-area: footer;
+  background-color: var(--slight-contrast-color);
+  min-height: 40vh;
+  display: flex;
+  justify-content: center;
 }
 
 /* BEM Elements */
@@ -77,6 +85,10 @@
   margin-right: 20px;
   font-family: var(--link-font);
   padding: 20px 0;
+}
+
+.nav__link:hover {
+  color: var(--contrast-color);
 }
 
 .header__card {
@@ -99,13 +111,11 @@
 }
 
 .project-tile__caption {
-  color: var(--contrast-color);
   font-family: var(--link-font);
   font-size: calc(1rem + 0.1vw);
   margin-top: calc(15px + .3vw);
   margin-bottom: calc(5px + .3vw);
   width: auto;
-  align-self: center;
   text-align: center;
 }
 
@@ -114,6 +124,30 @@
   display: block;
   width: calc(15rem + 10vw);
   margin: 40px auto;
+}
+
+.footer__link {
+  text-decoration: none;
+  font-family: var(--link-font);
+  font-size: calc(0.8rem + 0.2vw);
+
+  color: var(--main-color);
+  text-align: center;
+  margin: 0 3vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer__link:hover {
+  color: var(--neutral-color);
+}
+
+.footer__img {
+  max-width: 100px;
+  width: calc(3rem + 6vw);
+  margin: 0 auto 5px auto;
 }
 
 /* BEM Modifiers */
@@ -132,6 +166,7 @@
   .main {
     padding: 0 3vw;
   }
+
   .projects {
     display: grid;
     grid-template-columns: auto auto;
