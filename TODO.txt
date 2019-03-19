@@ -2,3 +2,4 @@
 2. Add 'contact me' link to webform after learning Java
 3. Explore font package for header/links/text
 4. Add a hover effect to project cards (image filter, highlight border, pop-out, etc.)
+5. Add animations for buttons, links, transitions
